@@ -1,10 +1,17 @@
 class Task:
-	def __init__(self, title):
+	def __init__(self, title, description):
 		self.title = title
+		self.description = description
 
 	def showTask(self):
-		print("The title for the task is", self.title)
+		print("Task details: ")
+		print("Title: ", self.title)
+		print("Description: ", self.description)
 
 if __name__ == '__main__':
-	task = Task("Write First Program")
+	name = input("Enter task name: ")
+	description = input("Provide a description: ")
+
+	task = Task(name, description)
 	task.showTask()
+
